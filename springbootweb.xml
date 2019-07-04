@@ -1,0 +1,9 @@
+<service>
+    <id>springbootweb</id>
+    <name>springbootweb</name>
+    <description>This runs subscriber as a windowos service.</description>
+    <env name="MYAPP_HOME" value="%BASE%"/>
+    <executable>java</executable>
+    <arguments>-Xmx512m -Dlog4j.configuration=file:conf/log4j.properties -jar "%BASE%\springbootweb.jar"</arguments>
+    <logmode>rotate</logmode>
+</service>
